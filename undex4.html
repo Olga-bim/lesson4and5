@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <button onclick="number()">number</button>
+    <script>
+        function number() {
+            console.log('30');
+        }
+    </script>
+    <br>
+    <br>
+    <br>
+    <label> Deck</label>
+    <input id="desk">
+    <button onclick="printNumbers()">AR</button>
+    <script>
+
+
+        function printNumbers() {
+            desk.value += index
+        }
+
+
+
+    </script> -->
+
+
+
+    <!-- <br>
+    <label for="userName">uName</label>
+<input id="userName" type="text">
+<button onclick="setUserName()">Test</button>
+<script>
+    function setUserName() {
+        document.getElementById('userName').value = "Olga";
+    }
+</script>
+    <br> -->
+    <!-- 
+    <div id="display"></div>
+    <button onclick="testDisplay()">Generate Buttons</button>
+    <script>
+        function testDisplay() {
+            const display = document.getElementById('display');
+            for (let index = 0; index < 10; index++) {
+                display.innerHTML += "<button>waga</button>";
+            }
+        }
+    </script>
+
+   <br>
+   <br>
+
+   <div id="display2"></div>
+   <button onclick="testDisplay2()">Generate Input</button>
+   <script>
+       function testDisplay2() {
+           const display = document.getElementById('display2');
+           for (let index = 0; index < 10; index++) {
+               display.innerHTML += '<input type="text" placeholder="Input ' + (index + 1) + '">';
+           }
+       }
+   </script>
+   <br>
+   <br>
+
+<div id="display3"></div>
+<button onclick="testDisplay3()">Generate Numbers</button>
+<script>
+    function testDisplay3() {
+        const display = document.getElementById('display3');
+        display.innerHTML = ''; // Очищаем содержимое перед добавлением новых элементов
+        for (let index = 1; index <= 20; index++) {
+            display.innerHTML += index + ' ';
+        }
+    }
+</script>
+<br>
+<br>
+<br>
+
+<div id="display4"></div>
+<button onclick="testDisplay4()">Generate multiplication table</button>
+<script>
+    function testDisplay4() {
+        const display = document.getElementById('display4');
+        display.innerHTML = ''; 
+        let table = '<table border="1">';
+
+        // Заголовок таблицы
+        table += '<tr><th>*</th>';
+        for (let i = 1; i <= 10; i++) {
+            table += `<th>${i}</th>`;
+        }
+        table += '</tr>';
+
+        // Тело таблицы
+        for (let i = 1; i <= 10; i++) {
+            table += `<tr><th>${i}</th>`;
+            for (let j = 1; j <= 10; j++) {
+                table += `<td>${i * j}</td>`;
+            }
+            table += '</tr>';
+        }
+        table += '</table>';
+
+        display.innerHTML = table;
+    }
+
+    
+</script>
+
+<br>
+<br>
+
+<div id="display5"></div>
+<button onclick="testDisplay5()">Generate calculator</button>
+<script>
+ function testDisplay5() {
+     const display = document.getElementById('display5');
+      
+     for (let index = 0; index < 10; index++) {
+               display.innerHTML += '<input type="text" placeholder="Input ' + (index + 1) + '">';
+           } -->
+
+
+
+    <button onclick="showDisplay()" style="background-color: red; color: white;">Generate multiplication table</button>
+    <button onclick="toggleDisplay()" style="background-color: blue; color: white; margin-left: 10px;">Toggle
+        Display</button>
+    <div id="display" style="background-color: green; color: white; padding: 10px; margin-top: 10px; display: none;">
+    </div>
+
+
+    <script>
+        function showDisplay() {
+            const display = document.getElementById('display');
+            display.style.display = 'block'; // Показываем элемент
+            multTable(); // Генерируем таблицу умножения
+        }
+
+        function multTable() {
+            const display = document.getElementById('display');
+            display.innerHTML = ''; // Очищаем содержимое перед добавлением новых элементов
+            let table = '<table style="border-collapse: collapse; width: 100%;">';
+
+            // Заголовок таблицы
+            table += '<tr><th style="border: 1px solid black;">*</th>';
+            for (let i = 1; i <= 10; i++) {
+                table += `<th style="border: 1px solid black;">${i}</th>`;
+            }
+            table += '</tr>';
+
+            // Тело таблицы
+            for (let i = 1; i <= 10; i++) {
+                table += `<tr><th style="border: 1px solid black;">${i}</th>`;
+                for (let j = 1; j <= 10; j++) {
+                    table += `<td style="border: 1px solid black; text-align: center;">${i * j}</td>`;
+                }
+                table += '</tr>';
+            }
+            table += '</table>';
+
+            display.innerHTML = table;
+        }
+
+        function toggleDisplay() {
+            const display = document.getElementById('display');
+            if (display.style.display === 'none') {
+                display.style.display = 'block'; // Показываем элемент
+            } else {
+                display.style.display = 'none'; // Скрываем элемент
+            }
+        }
+    </script>
+
+
+    <br>
+    <br> 
+<!-- 
+    <button id="btn1" onclick="changeColour()">Test</button>
+    <div id="display">aaaaa</div>
+    
+    <script>
+        // Переменная для отслеживания состояния видимости
+        let isVisible = true;
+    
+        function changeColour() {
+            const display = document.getElementById('display');
+    
+            if (isVisible) {
+                // Изменяем цвет фона и скрываем элемент
+                display.style.backgroundColor = 'green'; // Цвет фона
+                display.style.display = 'none'; // Скрываем элемент
+            } else {
+                // Показываем элемент и изменяем цвет фона
+                display.style.backgroundColor = 'green'; // Цвет фона
+                display.style.display = 'block'; // Показываем элемент
+            }
+    
+            // Переключаем состояние видимости
+            isVisible = !isVisible;
+        }
+    </script> -->
+    
+   
+</body>
+
+</html>

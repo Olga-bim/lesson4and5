@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        button {
+            width: 30px;
+            height: 30px;
+            background-color: aqua;
+            margin-bottom: 2px;
+            margin-top: 5px;
+        }
+
+        input {
+            background-color: bisque;
+        }
+
+    </style>
+</head>
+
+<body>
+    <input id="res" value="0">
+    <br>
+    <button onclick="clearInput()">c</button>
+    <button>/</button>
+    <button>*</button>
+    <button>=</button>
+    <br>
+    <button onclick="digit9()">9</button>
+    <button onclick="digit8()">8 </button>
+    <button onclick="digit7()">7</button>
+    <button onclick="plus()">+</button>
+    <br>
+    <button onclick="digit6()">6</button>
+    <button onclick="digit5()">5</button>
+    <button onclick="digit4()">4</button>
+    <button>-</button>
+    <br>
+    <button onclick="digit3()">3</button>
+    <button onclick="digit2()">2</button>
+    <button onclick="digit1()">1</button>
+    <button onclick="digit0()">0</button>
+
+
+    <script>
+let clearFlag =false
+        let firstNumber =0
+        function plus() {
+            firstNumber = res.value
+            // console.log(firstNumber);
+
+            
+
+        }
+        function clearInput() {
+            res.value = "0"
+
+        }
+        function digit9() {
+            if (res.value == "0") {
+                res.value = ""
+            }
+            if (res.value.length < 7) {
+                res.value += "9"
+            }
+
+        }
+
+        function digit8() {
+            if (res.value == "0") {
+                res.value = ""
+            }
+            if (res.value.length < 7) {
+                res.value += "8"
+            }
+        }
+        function digit7() {
+            if (res.value == "0") {
+                res.value = ""
+            }
+            if (res.value.length < 7) {
+                res.value += "7"
+            }
+
+        }
+        function digit6() {
+            if (res.value == "0") {
+                res.value = ""
+            }
+            if (res.value.length < 7) {
+                res.value += "6"
+            }
+
+        }
+        function digit5() {
+            if (res.value == "0") {
+                res.value = ""
+            }
+            if (res.value.length < 7) {
+                res.value += "5"
+            }
+
+        }
+        function digit4() {
+            if (res.value == "0") {
+                res.value = ""
+            }
+            if (res.value.length < 7) {
+                res.value += "4"
+            }
+
+        }
+        function digit3() {
+            if (res.value == "0") {
+                res.value = ""
+            }
+            if (res.value.length < 7) {
+                res.value += "3"
+            }
+
+        }
+        function digit2() {
+            if (res.value == "0") {
+                res.value = ""
+            }
+            if (res.value.length < 7) {
+                res.value += "2"
+            }
+
+        }
+        function digit1() {
+            if (res.value == "0") {
+                res.value = ""
+            }
+            if (res.value.length < 7) {
+                res.value += "1"
+            }
+
+        }
+        function digit0() {
+            if (res.value == "0") {
+                res.value = ""
+            }
+            res.value += "0"
+
+        }
+
+    </script>
+
+</body>
+
+</html>

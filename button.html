@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container { 
+  height: 200px;
+  width: 100%;
+  position: relative;
+  border: 3px solid green; 
+  box-sizing: border-box; /* Чтобы рамка входила в общую ширину */
+}
+
+#moveButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+
+<h2>Centering</h2>
+<p>In this example, we use positioning and the transform property to vertically and horizontally center the button element:</p>
+
+<div class="container">
+  <button id="moveButton">Centered Button</button>
+</div>
+
+<script>
+document.getElementById('moveButton').addEventListener('click', function() {
+    const button = this;
+    const container = button.parentElement;
+    const maxWidth = container.clientWidth - button.offsetWidth;
+    const maxHeight = container.clientHeight - button.offsetHeight;
+
+    const newLeft = Math.random() * maxWidth;
+    const newTop = Math.random() * maxHeight;
+
+    button.style.left = newLeft + 'px';
+    button.style.top = newTop + 'px';
+    button.style.transform = ''; // Удаление трансформации для корректного позиционирования
+});
+</script>
+
+</body>
+</html>

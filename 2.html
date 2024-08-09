@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button id="btn1" onclick="changeColour()">Test</button>
+    <div id="display">num</div>
+    <br>
+   
+    <script>
+        function changeColour() {
+            
+            btn1.style.backgroundColor = "rgb(0,255,255)";
+            console.log(btn1.style);
+    
+            display.style.backgroundColor = "rgb(0,255,255)";
+            console.log(display.style);
+    
+        }
+    
+        let n1 = 0;
+        let n2 = 0;
+    
+        function myCallback() {
+    
+            // Обновляем цвет кнопки
+            btn1.style.backgroundColor = `rgb(${n1 % 250}, ${n1 * 2 % 250}, ${n1 + 200 - 3 * n1 % 250})`;
+            console.log(n1);
+             
+            // Обновляем фон display и текст внутри него
+            display.style.backgroundColor = `rgb(${n2 % 250}, ${n2 * 2 % 250}, ${n2 + 200 - 3 * n2 % 250})`;
+            display.textContent = n2; // Отображаем значение n2 в display
+            
+            // Обновляем значения
+            n1++;
+            n2++;
+            
+            console.log(n1);
+            console.log(n2);
+          
+        }
+    
+        // Установка интервала для вызова myCallback
+        setInterval(myCallback, 2000);
+    </script>
+     -->
+
+    <button id="hourBtn" onclick="changeHour()">Hour</button>
+<button id="minutBtn" onclick="changeMinut()">Minut</button>
+<div id="display1">Hour</div>
+<div id="display2">Minut</div>
+<br>
+
+<script>
+    function changeHour() {
+        const hourBtn = document.getElementById('hourBtn');
+        const minutBtn = document.getElementById('minutBtn');
+        const display1 = document.getElementById('display1');
+        const display2 = document.getElementById('display2');
+        
+        hourBtn.style.backgroundColor = "rgb(0,255,255)";
+        console.log(hourBtn.style);
+
+        minutBtn.style.backgroundColor = "rgb(0,255,255)";
+        console.log(minutBtn.style);
+
+        display1.style.backgroundColor = "rgb(0,255,255)";
+        console.log(display1.style);
+
+        display2.style.backgroundColor = "rgb(0,255,255)";
+        console.log(display2.style);
+    }
+
+    function changeMinut() {
+        const minutBtn = document.getElementById('minutBtn');
+        minutBtn.style.backgroundColor = "rgb(0,255,255)";
+        console.log(minutBtn.style);
+    }
+
+    setInterval(myCallback, 1000);
+    let n1 = 0;
+    let n2 = 0;
+
+    function myCallback() {
+        const display1 = document.getElementById('display1');
+        const display2 = document.getElementById('display2');
+
+        display1.innerHTML = n1;
+        n1++;
+        console.log(n1);
+
+        display2.innerHTML = n2;
+        n2++;
+        console.log(n2);
+    }
+</script>
+
+</body>
+</html>

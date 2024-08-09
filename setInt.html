@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInt</title>
+</head>
+
+<body>
+    <!-- <button id="btn1" onclick="changeColour()">Test</button>
+    <div id="display">num</div>
+    <br>
+
+    <script>
+        function changeColour() {
+            btn1.style.backgroundColor = "rgb(0,255,255)"
+            console.log(btn1.style);
+
+            display.style.backgroundColor = "rgb(0,255,255)"
+            console.log(display.style);
+        }
+
+
+        setInterval(myCallback, 1000);
+        let n1 = 0
+        let n2 = 0
+
+
+        function myCallback() {
+            btn1.style.backgroundColor = `rgb(${n1 % 250}, ${n1 * 2 % 250}, ${n1 + 200 - 3 * n1 % 250})`
+            n1++
+            console.log(n1);
+
+            display.style.backgroundColor = `rgb(${n1 % 250}, ${n1 * 2 % 250}, ${n1 + 200 - 3 * n1 % 250})`
+            n2++
+            console.log(n2);
+            display.innerHTML = n2
+        }
+    </script> -->
+
+    <button id="hour" onclick="changeHour()">Hour</button>
+    <button id="minut" onclick="changeMinut()">Minut</button>
+    <div id="display1">Hour</div>
+    <div id="display2">Minut</div>
+    <br>
+
+    <script>
+        function changeHour() {
+            hour.style.backgroundColor = "rgb(0,255,255)"
+            console.log(hour.style);
+        }
+
+        function changeMinut() {
+            minut.style.backgroundColor = "rgb(0,255,255)"
+            console.log(minut.style);
+
+        }
+
+        let n1 = 0
+        let n2 = 0
+
+        setInterval(myCallback, 1000);
+
+
+        function myCallback() {
+            display1.innerHTML = n1
+            n1++
+            console.log(n1);
+            display.innerHTML = n1
+
+            display2.innerHTML = n2
+            n2++
+            console.log(n2);
+            display.innerHTML = n2
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

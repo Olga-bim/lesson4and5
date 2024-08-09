@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+
+<body>
+    <script>
+        // сумма парных чисел от 0 до 50
+        // let sum =0
+        // for (let i = 0; i <= 50; i+=2) {
+        //  sum +=i
+        // }
+        // console.log(sum);
+
+
+        // все числа которые делятся на 3 без остатка  
+
+        // for (let i= 0; i <=100; i++) {
+        //    if (i % 3 ===0 ) {
+        //   console.log(i);
+        //    }
+
+        // }
+
+        for (let i = 1; i <= 100; i++) {
+            if (i % 15 == 0) {
+                console.log("FizzBuzz");
+            }
+            else {
+                if (i % 3 == 0) {
+                    console.log("Fizz");
+                } else {
+                    if (i % 5 ==0) {
+                        console.log("Buzz");  
+                    } else {
+                    console.log(i);
+                    }
+                }
+
+            }
+        }
+    </script>
+</body>
+
+</html>
